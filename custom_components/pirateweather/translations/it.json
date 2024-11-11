@@ -1,0 +1,61 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "La posizione è già stata configurata"
+        },
+        "error": {
+            "cannot_connect": "Impossibile connettersi",
+            "invalid_api_key": "Chiave API non valida"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Chiave API",
+                    "language": "Lingua",
+                    "latitude": "Latitudine. Per usare la posizione corrente, impostarla a 0.",
+                    "longitude": "Longitudine. Per usare la posizione corrente, impostarla a 0.",
+                    "mode": "Modalità previsione per l'entità meteo",
+                    "name": "Nome integrazione",
+                    "units": "Unità per i sensori. In uso solo se i sensori sono stati attivati.",
+                    "forecast": "Sensori per le previsioni giornaliere in formato csv, da 0-7 (ex. '0,1,3'). In uso solo se i sensori sono stati attivati.",
+                    "hourly_forecast":  "Sensori per le previsioni orarie in formato csv, da 0-168 (ex. '0,1,10'). In uso solo se i sensori sono stati attivati.",
+                    "monitored_conditions": "Condizioni monitorare per poter creare i sensori. In uso solo se i sensori sono stati attivati.",
+                    "pw_platform": "Entità meteo e/o entità sensore. Il sensore creerà entità per ogni condizione ogni volta. Se non si è sicuri, selezionare soltanto Meteo!",
+                    "pw_round": "Valori arrotondati. Accertarsi che l'unità selezionata sia coerente con le unità di sistema.",
+                    "scan_interval": "Secondi di attesa tra ogni aggiornamento. Non è consigliato ridurre questo valore sotto 900 secondi (15 minuti)."                                         
+                },
+                "description": "Configura l'integrazione Pirate Weather. Per genrare la chiave API visitare https://pirateweather.net",
+                "data_description": {
+                  "previsioni": "ex. '0,1,4' (senza virgolette)",
+                  "previsioni_orarie": "ex. '0,1,4' (senza virgolette)"
+                }                
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "api_key": "API Key",
+                    "language": "Lingua",
+                    "latitude": "Latitudine. Per usare la posizione corrente, impostarla a 0",
+                    "longitude": "Longitudine. Per usare la posizione corrente, impostarla a 0",
+					"scan_interval": "Secondi di attesa tra ogni aggiornamento. Non è consigliato ridurre questo valore sotto 900 secondi (15 minuti).",
+                    "mode": "Modalità previsione per l'entità meteo",
+                    "name": "Nome Integrazione",
+                    "units": "Unità per i sensori. In uso solo se i sensori sono stati attivati.",
+                    "forecast": "Sensori per le previsioni giornaliere in formato csv, da 0-7 (ex. '0,1,3'). In uso solo se i sensori sono stati attivati.\n NOTA: Removing sensors will produce orphaned entities that need to be deleted.",
+                    "hourly_forecast":  "Hourly forecast sensors in csv form from 0-168 (ex. '0,1,10'). Only used if sensors are requested.\n NOTE: Removing sensors will produce orphaned entities that need to be deleted.",
+                    "monitored_conditions": "Monitored conditions to create sensors for. Only used if sensors are requested.\n NOTE: Removing sensors will produce orphaned entities that need to be deleted.",
+                    "pw_platform": "Weather Entity and/or Sensor Entity. Sensor will create entities for each condition at each time. If unsure, only select Weather!",
+                    "pw_round": "Round values to the nearest integer. Ensure that the selected units match the system units."
+                },
+                "description": "Set up Pirate Weather integration. To generate API key go to https://pirateweather.net",
+                "data_description": {
+                  "forecast": "ex. '0,1,4'.\n To remove existing sensors, type 'None' (without quotes).",
+                  "hourly_forecast": "ex. '0,1,4'.\n To remove existing sensors, type 'None' (without quotes)."
+                }         
+            }
+        }
+    }
+}
